@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.marutisuzuki.com/",
+  "path": "index",
+  "timestamp": "2026-05-14T11:36:34.762Z",
+  "title": "Maruti Suzuki India Corporate - Discover Arena, NEXA cars, Commercial and True Value",
+  "template": "homepage",
+  "blocks": [
+    "carousel-banner",
+    "cards-channel",
+    "cards-highlight",
+    "carousel-product",
+    "carousel-product",
+    "cards-values",
+    "cards-counter"
+  ]
+}

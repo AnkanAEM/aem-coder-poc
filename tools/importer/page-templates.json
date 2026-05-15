@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "projectType": "doc"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": ["https://www.marutisuzuki.com/"],
+      "description": "Maruti Suzuki homepage with hero banner, vehicle showcases, offers, and brand content",
+      "blocks": [
+        {
+          "name": "carousel-banner",
+          "instances": [".corp-carousel.block"]
+        },
+        {
+          "name": "cards-channel",
+          "instances": [".corporate-business-card.block"]
+        },
+        {
+          "name": "cards-highlight",
+          "instances": [".highlights.block"]
+        },
+        {
+          "name": "carousel-product",
+          "instances": [".corp-slider.block"]
+        },
+        {
+          "name": "cards-values",
+          "instances": [".corp-our-values.block"]
+        },
+        {
+          "name": "cards-counter",
+          "instances": [".corp-counter.block"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Banner",
+          "selector": ".section.corp-carousel-container",
+          "style": null,
+          "blocks": ["carousel-banner"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Business Channels",
+          "selector": ".section.corporate-business-card-container",
+          "style": null,
+          "blocks": ["cards-channel"],
+          "defaultContent": [".corporate-business-card .business-card-title", ".corporate-business-card .business-card-title-hr"]
+        },
+        {
+          "id": "section-3",
+          "name": "Highlights",
+          "selector": ".section.highlights-container",
+          "style": null,
+          "blocks": ["cards-highlight"],
+          "defaultContent": [".highlights-container .default-content-wrapper h2"]
+        },
+        {
+          "id": "section-4",
+          "name": "Car Catalog",
+          "selector": ".section.corp-slider-container",
+          "style": null,
+          "blocks": ["carousel-product"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Our Values",
+          "selector": ".section.corp-our-values-container",
+          "style": null,
+          "blocks": ["cards-values"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Customer Counter",
+          "selector": ".section.corp-counter-container",
+          "style": null,
+          "blocks": ["cards-counter"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}
