@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-counter",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-14T11:22:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.marutisuzuki.com/",
+    "originPage": "Maruti Suzuki corporate homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "stats-counter",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "counter number + label + CTA buttons",
+    "buttonCount": 2,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "customer count displays",
+      "statistics/metrics sections",
+      "achievement counters with CTAs"
+    ],
+    "notSuitableFor": [
+      "product cards",
+      "image galleries",
+      "text content sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T11:22:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-product",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-14T11:22:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.marutisuzuki.com/",
+    "originPage": "Maruti Suzuki corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-catalog",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + category tabs + car image thumbnails with labels",
+    "buttonCount": 0,
+    "imageCount": 10
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product catalog carousels",
+      "vehicle model showcase",
+      "categorized image galleries"
+    ],
+    "notSuitableFor": [
+      "hero banners",
+      "text-heavy content sliders",
+      "single-item featured displays"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T11:22:00.000Z"
+  }
+}

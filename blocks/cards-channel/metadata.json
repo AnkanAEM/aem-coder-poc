@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-channel",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-14T11:22:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.marutisuzuki.com/",
+    "originPage": "Maruti Suzuki corporate homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "business-channel",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + logo + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "business channel showcases",
+      "brand category cards with large imagery",
+      "featured product line cards"
+    ],
+    "notSuitableFor": [
+      "simple text cards",
+      "small icon-based cards",
+      "compact list items"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T11:22:00.000Z"
+  }
+}

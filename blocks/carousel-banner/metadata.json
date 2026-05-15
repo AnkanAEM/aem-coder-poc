@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-banner",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-14T11:22:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.marutisuzuki.com/",
+    "originPage": "Maruti Suzuki corporate homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "hero-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "full-width linked banner images",
+    "buttonCount": 0,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero banners",
+      "promotional banner rotations",
+      "full-width image-only carousels"
+    ],
+    "notSuitableFor": [
+      "product detail carousels",
+      "text-heavy content slides",
+      "thumbnail galleries"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T11:22:00.000Z"
+  }
+}
