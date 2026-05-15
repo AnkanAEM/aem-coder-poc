@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-values",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-14T11:22:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.marutisuzuki.com/",
+    "originPage": "Maruti Suzuki corporate homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "company-values",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "heading + icon grid + CTA buttons",
+    "buttonCount": 2,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "company values sections",
+      "icon-based feature grids on colored backgrounds",
+      "corporate culture highlights"
+    ],
+    "notSuitableFor": [
+      "product cards",
+      "text-heavy content cards",
+      "white background sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-14T11:22:00.000Z"
+  }
+}
