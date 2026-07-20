@@ -10,7 +10,34 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  readBlockConfig,
 } from './aem.js';
+
+/**
+ * Applies section-metadata blocks to their parent section as classes/dataset,
+ * then removes the metadata block. The project's aem.js decorateSections does
+ * not consume section-metadata, so this restores the standard EDS behavior.
+ * @param {Element} main The container element
+ */
+function decorateSectionMetadata(main) {
+  main.querySelectorAll(':scope > .section .section-metadata').forEach((metaBlock) => {
+    const section = metaBlock.closest('.section');
+    const wrapper = metaBlock.parentElement;
+    const meta = readBlockConfig(metaBlock);
+    Object.keys(meta).forEach((key) => {
+      if (key === 'style') {
+        meta.style.split(',').map((s) => s.trim()).forEach((s) => {
+          if (s) section.classList.add(s);
+        });
+      } else {
+        section.dataset[key.replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = meta[key];
+      }
+    });
+    metaBlock.remove();
+    // drop the now-empty wrapper that held the metadata block
+    if (wrapper && wrapper !== section && wrapper.children.length === 0) wrapper.remove();
+  });
+}
 
 /**
  * Builds hero block and prepends to main in a new section.
@@ -122,6 +149,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateSectionMetadata(main);
   decorateBlocks(main);
   decorateButtons(main);
 }

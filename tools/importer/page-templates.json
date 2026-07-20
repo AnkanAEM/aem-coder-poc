@@ -1,86 +1,114 @@
 {
   "metadata": {
-    "projectType": "doc"
+    "projectType": "da"
   },
   "templates": [
     {
       "name": "homepage",
-      "urls": ["https://www.marutisuzuki.com/"],
-      "description": "Maruti Suzuki homepage with hero banner, vehicle showcases, offers, and brand content",
+      "urls": [
+        "https://www.jsw.in/"
+      ],
+      "representativeUrl": "https://www.jsw.in/",
+      "coverageGaps": [],
+      "description": "JSW Group corporate homepage with hero banner carousel, group overview with stats, business divisions carousel, sustainability, latest news, foundation, sports, and careers sections",
       "blocks": [
         {
-          "name": "carousel-banner",
-          "instances": [".corp-carousel.block"]
+          "name": "carousel-hero",
+          "instances": ["section.home_banner_wrp .home_bnr_sldr", "section.home_banner_wrp"]
         },
         {
-          "name": "cards-channel",
-          "instances": [".corporate-business-card.block"]
+          "name": "cards-stats",
+          "instances": ["section.home_overview .overview_numb_wrp"]
         },
         {
-          "name": "cards-highlight",
-          "instances": [".highlights.block"]
+          "name": "carousel-business",
+          "instances": ["section.home_buss_main .home_buss_sldr", "section.home_buss_main"]
         },
         {
-          "name": "carousel-product",
-          "instances": [".corp-slider.block"]
+          "name": "cards-news",
+          "instances": ["section.latest_news_wrp .lates_container"]
         },
         {
-          "name": "cards-values",
-          "instances": [".corp-our-values.block"]
+          "name": "foundation",
+          "instances": ["section.home_foundation_wrp"]
         },
         {
-          "name": "cards-counter",
-          "instances": [".corp-counter.block"]
+          "name": "video-bg",
+          "instances": ["section.jsw_sports_wrp"]
+        },
+        {
+          "name": "sustainability",
+          "instances": ["section.home_sustainability_wrp"]
+        },
+        {
+          "name": "disclaimer-modal",
+          "instances": ["#careerModal"]
         }
       ],
       "sections": [
         {
           "id": "section-1",
-          "name": "Hero Banner",
-          "selector": ".section.corp-carousel-container",
+          "name": "Hero banner carousel",
+          "selector": "section.home_banner_wrp",
           "style": null,
-          "blocks": ["carousel-banner"],
+          "blocks": ["carousel-hero"],
           "defaultContent": []
         },
         {
           "id": "section-2",
-          "name": "Business Channels",
-          "selector": ".section.corporate-business-card-container",
-          "style": null,
-          "blocks": ["cards-channel"],
-          "defaultContent": [".corporate-business-card .business-card-title", ".corporate-business-card .business-card-title-hr"]
+          "name": "Group overview",
+          "selector": "section.home_overview",
+          "style": "light",
+          "blocks": ["cards-stats"],
+          "defaultContent": ["section.home_overview .cntr_text", "section.home_overview > .container_1360_wrp > a.common_cta"]
         },
         {
           "id": "section-3",
-          "name": "Highlights",
-          "selector": ".section.highlights-container",
+          "name": "Business divisions carousel",
+          "selector": "section.home_buss_main",
           "style": null,
-          "blocks": ["cards-highlight"],
-          "defaultContent": [".highlights-container .default-content-wrapper h2"]
+          "blocks": ["carousel-business"],
+          "defaultContent": []
         },
         {
           "id": "section-4",
-          "name": "Car Catalog",
-          "selector": ".section.corp-slider-container",
+          "name": "Sustainability",
+          "selector": "section.home_sustainability_wrp",
           "style": null,
-          "blocks": ["carousel-product"],
+          "blocks": ["sustainability"],
           "defaultContent": []
         },
         {
           "id": "section-5",
-          "name": "Our Values",
-          "selector": ".section.corp-our-values-container",
-          "style": null,
-          "blocks": ["cards-values"],
-          "defaultContent": []
+          "name": "Latest News",
+          "selector": "section.latest_news_wrp",
+          "style": "light",
+          "blocks": ["cards-news"],
+          "defaultContent": ["section.latest_news_wrp h2.common_ttle", "section.latest_news_wrp a.common_cta"]
         },
         {
           "id": "section-6",
-          "name": "Customer Counter",
-          "selector": ".section.corp-counter-container",
-          "style": null,
-          "blocks": ["cards-counter"],
+          "name": "Foundation",
+          "selector": "section.home_foundation_wrp",
+          "style": "light",
+          "blocks": ["foundation"],
           "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Sports",
+          "selector": "section.jsw_sports_wrp",
+          "style": null,
+          "blocks": ["video-bg"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Careers",
+          "selector": "section.home_career_wrp",
+          "style": "careers-teaser",
+          "blocks": [],
+          "defaultContent": ["section.home_career_wrp .container_1360_wrp"]
         }
       ]
     }

@@ -1,17 +1,18 @@
 {
   "status": "success",
-  "url": "https://www.marutisuzuki.com/",
+  "url": "https://www.jsw.in/",
   "path": "index",
-  "timestamp": "2026-05-14T11:36:34.762Z",
-  "title": "Maruti Suzuki India Corporate - Discover Arena, NEXA cars, Commercial and True Value",
+  "timestamp": "2026-07-20T11:20:14.782Z",
+  "title": "JSW Group | Transforming Steel, Energy & Cement Industries",
   "template": "homepage",
   "blocks": [
-    "carousel-banner",
-    "cards-channel",
-    "cards-highlight",
-    "carousel-product",
-    "carousel-product",
-    "cards-values",
-    "cards-counter"
+    "carousel-hero",
+    "cards-stats",
+    "carousel-business",
+    "cards-news",
+    "foundation",
+    "video-bg",
+    "sustainability",
+    "disclaimer-modal"
   ]
 }

@@ -1,0 +1,110 @@
+/* Block: video-bg -- full-bleed background video with overlay caption.
+   Values extracted from https://www.jsw.in/ section.jsw_sports_wrp computed styles. */
+
+/* Full-bleed: escape the section content max-width constraint. */
+.video-bg-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.video-bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: rgb(255 255 255);
+  background-color: rgb(13 12 12);
+}
+
+/* Background video fills the section. */
+.video-bg .video-bg-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The authored row/cell become a positioned overlay container. */
+.video-bg > div {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.video-bg > div > div {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Overlay caption -- left aligned, white text. */
+.video-bg .video-bg-caption {
+  max-width: 779px;
+  text-align: left;
+}
+
+.video-bg .video-bg-logo {
+  margin: 0 0 24px;
+}
+
+.video-bg .video-bg-logo img {
+  width: auto;
+  max-width: 177px;
+  height: auto;
+}
+
+.video-bg .video-bg-caption h2 {
+  margin: 16px 0 40px;
+  color: rgb(255 255 255);
+  font-family: var(--heading-font-family);
+  font-size: 33.6px;
+  font-weight: 100;
+  line-height: 1.15;
+  letter-spacing: -1.68px;
+}
+
+.video-bg .video-bg-caption p {
+  margin: 0 0 30px;
+  color: rgb(255 255 255);
+  font-family: var(--body-font-family);
+  font-size: 16.8px;
+  line-height: 1.5;
+}
+
+/* CTA -- EDS decorates the standalone link into a.button (JSW blue pill). */
+.video-bg .video-bg-caption .button-container {
+  margin: 0;
+}
+
+.video-bg .video-bg-caption a.button:any-link {
+  background-color: var(--accent-color);
+  color: rgb(255 255 255);
+  border-color: var(--accent-color);
+}
+
+.video-bg .video-bg-caption a.button:any-link:hover {
+  background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+}
+
+/* Mobile: shorter viewport, smaller heading. */
+@media (width < 900px) {
+  .video-bg {
+    min-height: 70vh;
+  }
+
+  .video-bg .video-bg-caption h2 {
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin: 12px 0 24px;
+  }
+
+  .video-bg .video-bg-caption p {
+    font-size: 16px;
+  }
+}

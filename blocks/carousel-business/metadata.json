@@ -1,0 +1,37 @@
+{
+  "variantName": "carousel-business",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-07-17T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.jsw.in/",
+    "originPage": "JSW Group homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "business-divisions",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "banner image + logo + heading + paragraph + stats + link + share-price",
+    "buttonCount": 1,
+    "imageCount": 13
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "content-rich division/brand carousels with per-slide banner and stats",
+      "showcasing multiple business units with logos and CTAs"
+    ],
+    "notSuitableFor": [
+      "simple photo-only carousels",
+      "small inline galleries"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-17T00:00:00.000Z"
+  }
+}

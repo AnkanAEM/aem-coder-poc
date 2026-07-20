@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-17T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.jsw.in/",
+    "originPage": "JSW Group homepage - Latest News",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "news",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "category heading + headline link + tag",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news / press-release item lists without thumbnails",
+      "category + headline link card sets"
+    ],
+    "notSuitableFor": [
+      "image-led cards",
+      "numeric statistic callouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-17T00:00:00.000Z"
+  }
+}
