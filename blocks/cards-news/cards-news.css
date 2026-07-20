@@ -1,0 +1,202 @@
+/* Latest News -- featured item + stacked press releases */
+
+/* Values extracted from https://www.jsw.in/ (section.latest_news_wrp) */
+
+.cards-news {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: rgb(255 255 255);
+}
+
+.cards-news .cards-news-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* "Explore all" CTA row beneath the news grid */
+.cards-news .cards-news-cta {
+  margin-top: 8px;
+}
+
+.cards-news .cards-news-cta a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 30px;
+  border: 0;
+  border-radius: 16px;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: var(--body-font-size-xs);
+  font-weight: 900;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.cards-news .cards-news-cta a.button:any-link:hover {
+  background-color: var(--link-hover-color);
+}
+
+/* dark backing for the block to match the source section (beat .section.light) */
+main .section.light:has(.cards-news),
+main .section:has(.cards-news) {
+  background-color: rgb(42 42 42);
+}
+
+/* section heading ("Latest News") sits on the dark background */
+main .section:has(.cards-news) h2 {
+  color: rgb(255 255 255);
+}
+
+/* ---- Featured (left) ---- */
+.cards-news .cards-news-featured {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 260px;
+  border-radius: 40px;
+  overflow: hidden;
+  color: rgb(255 255 255);
+  text-decoration: none;
+}
+
+.cards-news .cards-news-featured picture,
+.cards-news .cards-news-featured img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards-news .cards-news-featured::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 75%) 0%, rgb(0 0 0 / 0%) 55%);
+}
+
+.cards-news .cards-news-featured-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 24px 28px;
+}
+
+.cards-news .cards-news-featured-overlay h4 {
+  margin: 0 0 4.2px;
+  font-family: var(--heading-font-family);
+  font-size: 13.44px;
+  font-weight: 800;
+  line-height: 16.128px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: rgb(255 255 255);
+}
+
+.cards-news .cards-news-featured-overlay p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgb(255 255 255);
+}
+
+/* ---- Press-release list (right) ---- */
+.cards-news .cards-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cards-news .cards-news-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  padding: 24px 35px;
+  border-radius: 40px;
+  background-color: rgb(64 64 64);
+}
+
+.cards-news .cards-news-item h4 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 13.44px;
+  font-weight: 700;
+  line-height: 16.128px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(54 195 255);
+}
+
+.cards-news .cards-news-item p {
+  margin: 10px 0;
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgb(255 255 255);
+}
+
+.cards-news .cards-news-item p a:any-link {
+  color: rgb(255 255 255);
+  text-decoration: none;
+}
+
+.cards-news .cards-news-item p a:hover {
+  text-decoration: underline;
+}
+
+.cards-news .cards-news-item h6 {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 11.76px;
+  font-weight: 400;
+  line-height: 14.112px;
+  color: rgb(145 160 172);
+  text-transform: none;
+}
+
+/* ---- Desktop: featured left, list right ---- */
+@media (width >= 900px) {
+  .cards-news .cards-news-grid {
+    flex-direction: row;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .cards-news .cards-news-featured {
+    flex: 0 0 60%;
+    min-height: 400px;
+  }
+
+  .cards-news .cards-news-featured-overlay {
+    padding: 0 35px 35px;
+  }
+
+  .cards-news .cards-news-featured-overlay p {
+    font-size: 23.52px;
+    line-height: 28.224px;
+  }
+
+  .cards-news .cards-news-list {
+    flex: 1 1 auto;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .cards-news .cards-news-item {
+    flex: 1 1 0;
+    min-height: 192px;
+  }
+
+  .cards-news .cards-news-item p {
+    font-size: 23.52px;
+    line-height: 28.224px;
+  }
+}

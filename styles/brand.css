@@ -1,0 +1,28 @@
+/* JSW brand tokens - extracted from https://www.jsw.in/ */
+:root {
+  /* fonts */
+  --heading-font-family: "Roboto", roboto-fallback, sans-serif;
+  --body-font-family: "Roboto", roboto-fallback, sans-serif;
+  --stat-font-family: "Barlow Condensed", "Roboto", sans-serif;
+
+  /* colors */
+  --background-color: rgb(255 255 255);
+  --text-color: rgb(33 37 41);
+  --link-color: rgb(99 193 249);
+  --link-hover-color: rgb(58 165 232);
+  --accent-color: rgb(99 193 249);
+  --stat-color: rgb(13 12 12);
+
+  /* spacing */
+  --section-padding: 80px;
+  --content-max-width: 1360px;
+  --nav-height: 90px;
+
+  /* heading sizes (desktop) */
+  --heading-size-xxl: 67px;
+  --heading-size-xl: 34px;
+  --heading-size-l: 25px;
+  --heading-size-m: 20px;
+  --heading-size-s: 16px;
+  --heading-size-xs: 13px;
+}

@@ -1,0 +1,76 @@
+/* Disclaimer modal - full-screen dialog shown once per session (jsw.in) */
+
+/* the authored block itself is invisible; content lives in the dialog */
+.disclaimer-modal {
+  margin: 0;
+}
+
+.disclaimer-modal-dialog {
+  width: min(920px, calc(100vw - 32px));
+  max-height: calc(100vh - 64px);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--text-color);
+  overflow: visible;
+}
+
+.disclaimer-modal-dialog::backdrop {
+  background-color: rgb(0 0 0 / 65%);
+}
+
+.disclaimer-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #666;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.disclaimer-modal-close:hover {
+  color: #000;
+}
+
+.disclaimer-modal-inner {
+  max-height: calc(100vh - 64px);
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.disclaimer-modal-inner p:first-child img {
+  width: 90px;
+  height: auto;
+}
+
+.disclaimer-modal-inner h1,
+.disclaimer-modal-inner h2,
+.disclaimer-modal-inner h3,
+.disclaimer-modal-inner h4 {
+  margin: 0 0 20px;
+  color: #1a2a6c;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 20px;
+}
+
+.disclaimer-modal-inner p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (width >= 900px) {
+  .disclaimer-modal-inner {
+    padding: 48px 56px;
+  }
+}

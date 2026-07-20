@@ -1,0 +1,119 @@
+/* Sustainability - full-bleed image band with left gradient + overlay text (jsw.in) */
+
+/* escape the section's max-width/padding so the band spans edge-to-edge */
+.sustainability-wrapper {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.sustainability {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 520px;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* background image fills the band */
+.sustainability .sustainability-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.sustainability .sustainability-media picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.sustainability .sustainability-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark gradient scrim from the left for legibility */
+.sustainability::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 40%) 40%, rgb(0 0 0 / 8%) 75%, rgb(0 0 0 / 0%) 100%);
+}
+
+/* overlay content, left-aligned within the content gutter */
+.sustainability .sustainability-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.sustainability .sustainability-eyebrow {
+  margin: 0 0 18px;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.sustainability .sustainability-content h1,
+.sustainability .sustainability-content h2,
+.sustainability .sustainability-content h3 {
+  margin: 0;
+  color: #fff;
+  font-weight: 100;
+  font-size: 33.6px;
+  line-height: 1.15;
+}
+
+.sustainability .sustainability-content p:not(.sustainability-eyebrow, .sustainability-cta) {
+  max-width: 630px;
+  margin: 20px 0 50px;
+  color: #fff;
+  font-size: 16.8px;
+  line-height: 1.5;
+}
+
+/* EXPLORE CTA: green pill (matches source) */
+.sustainability .sustainability-cta {
+  margin: 0;
+}
+
+.sustainability .sustainability-content a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 30px;
+  border: 0;
+  border-radius: 16px;
+  background-color: rgb(7 164 81);
+  color: #fff;
+  font-size: 13.44px;
+  font-weight: 900;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.sustainability .sustainability-content a.button:any-link:hover {
+  background-color: rgb(5 130 64);
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .sustainability {
+    min-height: 760px;
+  }
+
+  .sustainability .sustainability-content {
+    padding: 40px;
+  }
+}
